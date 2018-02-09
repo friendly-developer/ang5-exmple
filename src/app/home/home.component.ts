@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-
+  itemCount: Number;
+  btnText: String = 'Add Item';
+  goalText: String = 'My First Life Goal';
+  goals: Array<string> = [];
   constructor() { }
-
+  addItem() {
+    this.goals.push(this.goalText);
+    this.goalText = '';
+    this.itemCount = this.goals.length;
+  }
   ngOnInit() {
+    this.itemCount = this.goals.length;
   }
 
 }
