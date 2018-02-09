@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   itemCount: Number;
-  btnText: String = 'Add Item';
-  goalText: String = 'My First Life Goal';
+  btnText = 'Add Item';
+  goalText = 'My First Life Goal';
   goals: Array<string> = [];
   constructor() { }
   addItem() {
